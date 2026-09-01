@@ -352,3 +352,208 @@ button:hover {
 .joinArea button {
     margin: 0;
 }
+
+/* ========================================
+   スマホ対応
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* 全体 */
+    body {
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .container {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* タイトル */
+    h1 {
+        font-size: 26px;
+        letter-spacing: 4px;
+        margin: 10px 0 20px;
+    }
+
+
+    /* ========================================
+       ボックス
+    ======================================== */
+
+    section {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+
+        border-radius: 10px;
+
+        background: rgba(255, 255, 255, 0.55);
+    }
+
+
+    /* ロビー・結果画面 */
+    #lobby,
+    #result {
+        width: 100%;
+    }
+
+
+    /* ========================================
+       名前入力・部屋作成
+    ======================================== */
+
+    #createArea {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    #nameInput,
+    #createButton {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    /* ========================================
+       部屋参加
+    ======================================== */
+
+    .joinArea {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .joinArea input,
+    .joinArea button {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    /* ========================================
+       入力欄・ボタン
+    ======================================== */
+
+    input {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    button {
+        min-height: 46px;
+        padding: 12px 18px;
+        font-size: 15px;
+    }
+
+
+    /* ========================================
+       部屋情報
+    ======================================== */
+
+    #roomInfo {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    #playerList {
+        margin-top: 10px;
+    }
+
+    .player {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+
+    /* ========================================
+       ゲーム情報
+    ======================================== */
+
+    #roleInfo {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    #turnInfo {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    #players {
+        gap: 5px;
+    }
+
+    .playerCard {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+
+    /* ========================================
+       オセロ盤
+    ======================================== */
+
+    .board {
+        width: 94vw;
+        max-width: 500px;
+
+        gap: 2px;
+        padding: 2px;
+    }
+
+    .cell {
+        border-width: 1px;
+    }
+
+
+    /* ========================================
+       駒
+    ======================================== */
+
+    .stone {
+        width: 76%;
+        height: 76%;
+
+        top: 12%;
+        left: 12%;
+
+        box-shadow:
+            0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+    /* ========================================
+       メッセージ
+    ======================================== */
+
+    #message {
+        font-size: 15px;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+
+
+    /* ========================================
+       結果画面
+    ======================================== */
+
+    .resultCount {
+        font-size: 18px;
+        margin: 6px;
+    }
+
+    .winner {
+        font-size: 26px;
+        margin: 15px 0;
+    }
+
+    .allyReveal {
+        font-size: 21px;
+        margin: 15px 0;
+    }
+
+}
