@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        "Noto Sans JP",
+        sans-serif;
+
+    background: #202124;
+
+    color: white;
+}
+
+.container {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+}
+
+h1 {
+
+    text-align: center;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 30px;
+}
+
+section {
+
+    background: #2b2d31;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+input {
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    margin: 5px;
+}
+
+button {
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    margin: 5px;
+}
+
+button:hover {
+
+    opacity: 0.8;
+}
+
+.hidden {
+    display: none;
+}
+
+.joinArea {
+
+    margin-top: 10px;
+}
+
+.startArea {
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+#roomInfo {
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+#playerList {
+
+    margin-top: 15px;
+}
+
+.player {
+
+    padding: 10px;
+
+    margin: 5px 0;
+
+    background: #3a3d43;
+
+    border-radius: 6px;
+}
+
+
+/* =====================
+   ゲーム
+===================== */
+
+#roleInfo {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    padding: 15px;
+}
+
+#turnInfo {
+
+    text-align: center;
+
+    font-size: 20px;
+
+    margin-bottom: 15px;
+}
+
+#players {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+.playerCard {
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    background: #3a3d43;
+}
+
+
+/* =====================
+   オセロ盤
+===================== */
+
+.board {
+
+    width: min(80vw, 640px);
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(8, 1fr);
+
+    grid-template-rows:
+        repeat(8, 1fr);
+
+    gap: 3px;
+
+    background: #111;
+
+    padding: 3px;
+}
+
+.cell {
+
+    background: #177245;
+
+    border: 1px solid #0e522f;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.cell:hover {
+
+    filter: brightness(1.2);
+}
+
+
+/* =====================
+   駒
+===================== */
+
+.stone {
+
+    width: 72%;
+
+    height: 72%;
+
+    position: absolute;
+
+    top: 14%;
+
+    left: 14%;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 3px 6px rgba(0,0,0,0.5);
+}
+
+.black {
+    background: #111;
+}
+
+.red {
+    background: #e53935;
+}
+
+.blue {
+    background: #2196f3;
+}
+
+.yellow {
+    background: #fdd835;
+}
+
+
+/* =====================
+   メッセージ
+===================== */
+
+#message {
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    min-height: 30px;
+}
+
+
+/* =====================
+   結果
+===================== */
+
+#result {
+
+    text-align: center;
+}
+
+.resultCount {
+
+    font-size: 20px;
+
+    margin: 8px;
+}
+
+.winner {
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin: 20px 0;
+}
+
+.allyReveal {
+
+    font-size: 26px;
+
+    margin: 20px 0;
+}
+
+/* ========================================
+   ロビー・結果画面の幅
+======================================== */
+
+#lobby,
+#result {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================
+   名前入力・部屋作成
+======================================== */
+
+#createArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+#nameInput {
+    margin: 0;
+}
+
+#createButton {
+    margin: 0;
+}
+
+
+/* ========================================
+   部屋参加
+======================================== */
+
+.joinArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.joinArea input,
+.joinArea button {
+    margin: 0;
+}

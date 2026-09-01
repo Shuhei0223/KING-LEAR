@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>KING LEAR</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>KING LEAR</h1>
+
+    <section id="lobby">
+
+        <h2>LOBBY</h2>
+
+       <div id="createArea">
+    <input id="nameInput" placeholder="名前">
+    <button id="createButton">部屋を作る</button>
+</div>
+
+        <div class="joinArea">
+
+            <input
+                id="roomInput"
+                type="text"
+                placeholder="部屋ID">
+
+            <button id="joinButton">
+                部屋に参加
+            </button>
+
+        </div>
+
+        <div id="roomInfo"></div>
+
+        <div id="playerList"></div>
+
+        <div class="startArea">
+
+            <button id="startButton">
+                通常ゲーム開始
+            </button>
+
+            <button id="fixedKingButton">
+                自分が王で遊ぶ
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <section id="game" class="hidden">
+
+        <div id="roleInfo"></div>
+
+        <div id="turnInfo"></div>
+
+        <div id="players"></div>
+
+        <div
+            id="board"
+            class="board">
+        </div>
+
+        <div id="message"></div>
+
+    </section>
+
+
+    <section
+        id="result"
+        class="hidden">
+
+        <h2>GAME OVER</h2>
+
+        <div id="resultText"></div>
+
+        <button
+            onclick="location.reload()">
+            ロビーに戻る
+        </button>
+
+    </section>
+
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="game.js"></script>
+
+</body>
+
+</html>
