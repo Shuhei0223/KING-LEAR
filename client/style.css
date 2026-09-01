@@ -497,14 +497,15 @@ button:hover {
        オセロ盤
     ======================================== */
 
-    .board {
-        width: 94vw;
-        max-width: 500px;
+   .board {
+    width: 100%;
+    max-width: 500px;
 
-        gap: 2px;
-        padding: 2px;
-    }
+    gap: 2px;
+    padding: 2px;
 
+    margin: 0 auto;
+}
     .cell {
         border-width: 1px;
     }
